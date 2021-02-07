@@ -33,7 +33,7 @@ class Matlab_Task extends Task {
         if ($dotpos !== FALSE) { // Strip trailing .matlab if given
             $filename = substr($filename, 0, $dotpos);
         }
-        //$this->executableFileName =  $filename; // Matlab's idea of the executable filename doesn't include .m
+        $this->executableFileName =  $filename; // Matlab's idea of the executable filename doesn't include .m
         if (!copy($this->sourceFileName, $this->executableFileName . '.m')) {
             throw new exception("Matlab_Task: couldn't copy source file");
         }
