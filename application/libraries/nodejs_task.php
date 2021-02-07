@@ -23,7 +23,7 @@ class Nodejs_Task extends Task {
     }
 
     public function compile() {
-        $this->executableFileName = $this->sourceFileName;
+        //$this->executableFileName = $this->sourceFileName;
         if (strpos('.js', $this->executableFileName) != strlen($this->executableFileName) - 3) {
             $this->executableFileName .= '.js';
         }
